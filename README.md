@@ -11,6 +11,12 @@ Deux ensembles de dépendances `extras` existent pour le développement local:
 - `dev` 
 - `test`
 
+Le versionning de la bibliothèque est dynamique et dépend du tag git. Plus d'informations avec [https://https://pypi.org/project/setuptools-scm/](https://https://pypi.org/project/setuptools-scm/).
+
+## git hooks
+
+La bibliothèque [https://pre-commit.com/index.html](https://pre-commit.com/index.html) est installée en dépendance de développement.
+
 ## Forge github
 
 Le fichier [./.github/workflows/publish-test-pypi.yml](./.github/workflows/publish-test-pypi.yml) définit un *workflow github* pour la publication des tags sur la plateforme PyPI de test: [https://test.pypi.org/](https://https://test.pypi.org/)
@@ -25,6 +31,7 @@ Le script attend un secret contenant le token Test PyPI. Pour cela, renseignez u
 python -m venv .venv
 . .venv/bin/activate
 pip install -r requirements.txt
+pre-commit install
 ```
 
 Le requirements.txt est un raccourci pour `pip install -e .`.
